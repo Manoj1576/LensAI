@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FBF7EF;
+    color: #1A1714;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-luxury {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+
+  .font-editorial-display {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom Editorial Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F0E6;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBBFA7;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B08A55;
+}
+
+/* Luxury Film Grain Overlay (Subtle) */
+.grain-overlay {
+  background-image: radial-gradient(rgba(26, 23, 20, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.dark-grain-overlay {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Aperture scan keyframes */
+@keyframes apertureSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes laserScan {
+  0% { top: 0%; opacity: 0.8; }
+  50% { top: 100%; opacity: 1; }
+  100% { top: 0%; opacity: 0.8; }
+}
+
+.animate-aperture {
+  animation: apertureSpin 12s linear infinite;
+}
+
+.animate-scan-laser {
+  animation: laserScan 2.5s ease-in-out infinite;
+}
+
+/* Editorial line divider */
+.editorial-border {
+  border-color: rgba(26, 23, 20, 0.12);
+}
+
+.editorial-border-dark {
+  border-color: rgba(255, 255, 255, 0.12);
+}
